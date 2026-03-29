@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f3;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    position: relative;
+}
+
+/* Botón PDF */
+.pdf-button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn-pdf {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-pdf:hover {
+    background: #219653;
+}
+
+/* Header */
+header {
+    text-align: center;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #1e4a6b;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    display: inline-block;
+    margin: 0 12px;
+    color: #4a627a;
+    font-size: 0.95rem;
+}
+
+/* Secciones */
+h2 {
+    color: #1e4a6b;
+    border-left: 5px solid #27ae60;
+    padding-left: 15px;
+    margin: 30px 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Perfil */
+.profile p {
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+/* Experiencia */
+.job {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.job h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #27ae60;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.job-subtitle {
+    font-weight: 600;
+    color: #4a627a;
+    margin-bottom: 8px;
+}
+
+.job ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+.job li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+/* Educación */
+.degree {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.degree h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.degree p {
+    color: #4a627a;
+    font-size: 0.95rem;
+}
+
+/* Idiomas y habilidades */
+.skills {
+    margin-top: 25px;
+}
+
+.skills-section {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.skills-section h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.skills-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-section li {
+    background: #e8f5e9;
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: #1e6f3f;
+}
+
+/* Sección QR */
+.qr-section {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #e0e7ed;
+}
+
+.qr-section h2 {
+    border-left: none;
+    text-align: center;
+    padding-left: 0;
+}
+
+#qrcode {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.qr-text {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.qr-note {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e7ed;
+    font-size: 0.75rem;
+    color: #7f8c8d;
+}
+
+/* Estilos para impresión / PDF */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .cv-container {
+        box-shadow: none;
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .btn-pdf {
+        display: none;
+    }
+    
+    .pdf-button-container {
+        display: none;
+    }
+    
+    .qr-section {
+        page-break-inside: avoid;
+    }
+    
+    .job, .degree, .skills-section {
+        page-break-inside: avoid;
+    }
+    
+    .contact-info p {
+        font-size: 10pt;
+    }
+    
+    h1 {
+        font-size: 18pt;
+    }
+    
+    h2 {
+        font-size: 14pt;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cv-container {
+        padding: 20px;
+    }
+    
+    .contact-info p {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .skills-section ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .skills-section li {
+        display: inline-block;
+        width: fit-content;
+    }
+}

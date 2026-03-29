@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara Elizabeth Hilgert - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- QRCode.js para generar QR dinámicamente -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Botón para descargar PDF -->
+        <div class="pdf-button-container">
+            <button onclick="window.print()" class="btn-pdf">📄 Descargar / Guardar como PDF</button>
+        </div>
+
+        <!-- Encabezado con datos personales -->
+        <header>
+            <h1>Clara Elizabeth Hilgert</h1>
+            <div class="contact-info">
+                <p>📍 Presidente Quintana 177, Banfield</p>
+                <p>📱 1125541023</p>
+                <p>📧 eli.hilgert@gmail.com</p>
+            </div>
+        </header>
+
+        <!-- Perfil Profesional -->
+        <section class="profile">
+            <h2>Perfil Profesional</h2>
+            <p>Profesional con amplia trayectoria en atención al cliente, gestión de caja y coordinación de equipos en el sector gastronómico y comercial. Poseo una sólida capacidad de adaptación, manejo de diversos idiomas y experiencia en entornos dinámicos de alta responsabilidad.</p>
+        </section>
+
+        <!-- Experiencia Laboral -->
+        <section class="experience">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="job">
+                <h3>Minimercado La Blanquita</h3>
+                <p class="date">Abril 2024 – Noviembre 2025</p>
+                <ul>
+                    <li>Atención al público y gestión de ventas minoristas.</li>
+                    <li>Control de stock y reposición de mercadería.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Supermercados Vea</h3>
+                <p class="date">Junio 2013 – Enero 2014</p>
+                <ul>
+                    <li>Atención al cliente y funciones de línea de caja.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Casino Puerto Madero</h3>
+                <p class="date">Mayo 2008 – Septiembre 2012</p>
+                <p class="job-subtitle">Puesto: Croupier</p>
+                <ul>
+                    <li>Atención directa al cliente y manejo de caja en un entorno de alta precisión.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>La Azucena Restaurante</h3>
+                <p class="date">Junio 2005 – Febrero 2007</p>
+                <p class="job-subtitle">Puesto: Recepcionista, Cajera y Encargada</p>
+                <ul>
+                    <li>Supervisión operativa del salón y gestión administrativa de ingresos.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>The One RestoBar</h3>
+                <p class="date">Julio 1999 – Enero 2005</p>
+                <p class="job-subtitle">Puesto: Camarera, Cajera y Encargada</p>
+            </div>
+
+            <div class="job">
+                <h3>Restaurante Lawn Tennis Club</h3>
+                <p class="date">Mayo 1998 – Octubre 1998</p>
+                <p class="job-subtitle">Puesto: Cajera</p>
+            </div>
+
+            <div class="job">
+                <h3>Supermercado La Florida</h3>
+                <p class="date">Marzo 1995 – Noviembre 1997</p>
+                <p class="job-subtitle">Puesto: Cajera</p>
+            </div>
+        </section>
+
+        <!-- Formación Académica -->
+        <section class="education">
+            <h2>Formación Académica</h2>
+            
+            <div class="degree">
+                <h3>Licenciatura en Psicología</h3>
+                <p>Universidad de Kennedy (Cursado hasta 4° año)</p>
+            </div>
+
+            <div class="degree">
+                <h3>Licenciatura en Relaciones Internacionales</h3>
+                <p>Universidad de Lanús (Cursado hasta 3° año)</p>
+            </div>
+
+            <div class="degree">
+                <h3>Perito Mercantil</h3>
+                <p>Escuela Nacional de Comercio N°1 Dr. Manuel Obarrio (Graduada en 1994)</p>
+            </div>
+        </section>
+
+        <!-- Idiomas y Herramientas -->
+        <section class="skills">
+            <h2>Idiomas y Herramientas</h2>
+            
+            <div class="skills-section">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Italiano - Nivel Intermedio</li>
+                    <li>Inglés - Básico</li>
+                    <li>Francés - Básico</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h3>Tecnología</h3>
+                <ul>
+                    <li>Dominio de entorno Windows</li>
+                    <li>Microsoft Excel</li>
+                    <li>Microsoft Power Point</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección con QR -->
+        <section class="qr-section">
+            <h2>Mi CV Digital</h2>
+            <div id="qrcode"></div>
+            <p class="qr-text">📱 Escanea para ver mi portafolio / perfil profesional</p>
+            <p class="qr-note">*El QR puede vincularse a LinkedIn, portafolio o versión online del CV</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Clara Elizabeth Hilgert - Currículum Vitae</p>
+        </footer>
+    </div>
+
+    <script>
+        // Generar QR - puedes cambiar la URL por tu LinkedIn o portafolio online
+        // Una vez que subas la página a internet, cambia esta URL por la de tu CV online
+        var qr = new QRCode(document.getElementById("qrcode"), {
+            text: "https://www.linkedin.com/in/tuperfil", // <-- CAMBIA ESTO por tu URL real
+            width: 128,
+            height: 128,
+            colorDark: "#2c3e50",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+    </script>
+</body>
+</html>
